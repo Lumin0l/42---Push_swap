@@ -6,20 +6,11 @@
 /*   By: ide-la-i <ide-la-i@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 16:26:55 by ide-la-i          #+#    #+#             */
-/*   Updated: 2023/04/24 16:17:44 by ide-la-i         ###   ########.fr       */
+/*   Updated: 2023/05/03 13:01:59 by ide-la-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../library/push_swap.h"
-
-/*
-Quiero mirar si:
-	- Los argumentos vienen dentro de un " " y hacer split.
-	- Los argumentos son erroneos (no son numeric).
-	- Los argumentos tienen símbolos redundantes: -0 o +0.
-	- Los argumentos están repetidos: push_swap 5 9 6 6 4 7.
-	- Los números introducidos no están contmplados dentro del rango de int.
-*/
 
 static void	ft_error(char *message)
 {
@@ -55,19 +46,13 @@ static int	ft_isnum(char *num)
 	return (0);
 }
 
-void	ft_check_args(int argc, char **argv)
+void	ft_check_args(char **args)
 {
 	int		i;
-	char	**args;
+	char	*args;
 	long	temp_number;
 
-	if (argc == 2)
-		args = ft_split(argv[1], ' ');
-	else
-	{
-		i = 1;
-		args = argv;
-	}
+	i = 0;
 	while (args[i] != '\0')
 	{
 		temp_number = ft_atoi(args[i]);
@@ -78,6 +63,4 @@ void	ft_check_args(int argc, char **argv)
 		if (ft_isnum(temp_number) == 1)
 			ft_error("Error\n");
 	}
-	if (argc == 2)
-		free(args);	
 }
