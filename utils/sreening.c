@@ -6,17 +6,11 @@
 /*   By: ide-la-i <ide-la-i@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 16:26:55 by ide-la-i          #+#    #+#             */
-/*   Updated: 2023/05/03 13:01:59 by ide-la-i         ###   ########.fr       */
+/*   Updated: 2023/05/05 14:54:45 by ide-la-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../library/push_swap.h"
-
-static void	ft_error(char *message)
-{
-	ft_putendl_fd(message, 1);
-	exit (0);
-}
 
 static int	ft_repeated_num(int n, char **args, int i)
 {

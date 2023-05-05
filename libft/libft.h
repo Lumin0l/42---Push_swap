@@ -6,7 +6,7 @@
 /*   By: ide-la-i <ide-la-i@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 12:35:42 by ide-la-i          #+#    #+#             */
-/*   Updated: 2023/04/17 16:18:42 by ide-la-i         ###   ########.fr       */
+/*   Updated: 2023/05/05 15:03:18 by ide-la-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@
 //# include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
-/* # include <stdio.h> */
+# include <fcntl.h>
+// For Struct
+# include <stdio.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
