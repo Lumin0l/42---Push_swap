@@ -6,7 +6,7 @@
 /*   By: ide-la-i <ide-la-i@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 16:33:04 by ide-la-i          #+#    #+#             */
-/*   Updated: 2022/12/20 17:17:00 by ide-la-i         ###   ########.fr       */
+/*   Updated: 2023/12/05 11:58:21 by ide-la-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static int	ft_wordcount(char const *s, char c)
 		if (s[i] != c && s[i] != '\0')
 			wordcount++;
 		while (s[i] != c && s[i] != '\0')
-				i++;
+			i++;
 	}
 	return (wordcount);
 }

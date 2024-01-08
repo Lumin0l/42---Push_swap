@@ -1,36 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ide-la-i <ide-la-i@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/17 13:11:16 by ide-la-i          #+#    #+#             */
-/*   Updated: 2023/05/05 18:03:16 by ide-la-i         ###   ########.fr       */
+/*   Created: 2023/11/30 18:37:01 by ide-la-i          #+#    #+#             */
+/*   Updated: 2023/12/05 11:55:32 by ide-la-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "libft.h"
 
-# include "../libft/libft.h"
-
-// Stack
-typedef struct s_stack
+int	ft_putnbr(int n)
 {
-	int				value;
-	int				index;
-	struct s_stack	*next;
-}				t_stack;
-	
-// Utils
-void	ft_check_args(char **args);
-void	ft_error(char *message);
+	unsigned int	num;
+	unsigned int	counter;
 
-// Stack
-t_stack	*ft_newNode_pointer(int number);
-void	ft_add_lastNode(t_stack **stack, t_stack *new_node);
-t_stack	*ft_lastNode_pointer(t_stack *position);
-
-#endif
-
+	num = 0;
+	counter = 1;
+	if (n < 0)
+	{
+		num = n * -1;
+		ft_putchar('-');
+		counter++;
+	}
+	else
+		num = n;
+	if (num > 9)
+	{
+		counter = counter + ft_putnbr((num / 10));
+	}
+	ft_putchar((num % 10) + '0');
+	return (counter);
+}
