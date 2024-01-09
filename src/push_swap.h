@@ -19,7 +19,7 @@ typedef struct s_stack_node
 	struct s_stack_node *target_node;	
 } t_stack_node
 
-// Error Hanfling
+// Error Handling
 
 
 #endif
